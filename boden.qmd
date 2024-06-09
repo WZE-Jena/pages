@@ -1,4 +1,3 @@
 ---
 title: "Boden- und Wasserhaushalt"
-author: "Markus Bernhardt-Römermann"
 ---
