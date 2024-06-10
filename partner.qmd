@@ -2,8 +2,50 @@
 title: "Projektpartner"
 ---
 
-About this site
+Das Projekt WZE\@Jena ist ein gemeinsames Vorhaben von:
 
-```{r}
-1 + 1
-```
+## Friedrich-Schiller-Universität Jena ([Link](https://www.uni-jena.de/ "FSU Jena"))
+
+Institut für Ökologie und Evolution ([Link](http://www.ecology.uni-jena.de/vegoeko.html "Institut für Ökologie und Evolution"))
+
+-   Markus Bernhardt-Römermann
+
+-   Esther Felgentreff
+
+-   Christine Römermann
+
+## Stadtforst Jena ([Link](https://ksj.jena.de/stadtwald "Stadtforst Jena"))
+
+Naturerlebnisregion [*natura jenensis*](https://www.natura-jenensis.de/ "natura jenensis")
+
+-   Olaf Schubert
+
+-   Franziska Vogelsang
+
+-   Carolina Reinhold
+
+-   Anni Bretschneider
+
+-   Markus Ziermann
+
+-   Julia Hartmann
+
+## Stadt Jena ([Link](https://startseite.jena.de/de "Stadt Jena"))
+
+Smart City Jena ([Link](https://smartcity.jena.de/smart-city/startseite "Smart City Jena"))
+
+-   Olivia Busch
+
+## Max-Planck-Institut für Biogeochemie ([Link](https://www.bgc-jena.mpg.de/ "MPI BGC"))
+
+Abteilung Biogeochemische Integration, Gruppe Ökosystemfunktionen aus der Erdbeobachtung ([Link](https://www.bgc-jena.mpg.de/en/bgi/efeo "Ökosystemfunktionen aus der Erdbeobachtung"))
+
+-   Daniel Loos
+
+## Zeiss Consumer Products ([Link](www.zeiss.com "Zeiss"))
+
+Digital Services Hunting/Nature
+
+-   Benedikt Hartmann
+
+-   ...

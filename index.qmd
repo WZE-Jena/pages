@@ -2,4 +2,37 @@
 title: "Das Projekt WZE@Jena"
 ---
 
+```{r}
+#| echo: false
+#| warning: false
+library(leaflet, quietly = TRUE)
+library(geojsonio, quietly = TRUE)
+library(sf, quietly = TRUE)
+gemeinde.grenzen <- geojson_read("shp/gemeinden_simplify200.geojson", what = "sp")
+coord.poly <- gemeinde.grenzen@polygons[[1]]@Polygons[[1]]@coords
+bbox <- st_bbox(gemeinde.grenzen) %>% 
+   unname()
+library(rgdal)
+Jena_invers <- readOGR("./shp/Grenze_Jena_invers.shp", verbose = FALSE)`
+#Jena_invers <- st_read("./shp/Grenze_Jena_invers.shp", layer = "Grenze_Jena_invers")
+Jena_invers2 <- spTransform(Jena_invers, "+init=epsg:4326")
+
+```
+
 WZE\@Jena ist ein gemeinschaftliches Projekt des *Insti*
+
+```{r}
+#| echo: false
+#height = 780, width = 600
+leaflet(height = 700) |> 
+  addTiles() |> 
+  flyToBounds(lng1 = bbox[1], lat1 = bbox[2], lng2 = bbox[3], lat2 = bbox[4]) |>
+  # zoom Jena
+  setView(lng = 11.59, lat = 50.918, zoom = 12) |> 
+  addPolygons(coord.poly[,1], coord.poly[,2], fill = FALSE, color = "blue", weight = 4, noClip = TRUE) |>  
+   fitBounds(lng1 = bbox[1], 
+             lat1 = bbox[2],
+             lng2 = bbox[3],
+             lat2 = bbox[4])
+
+```
