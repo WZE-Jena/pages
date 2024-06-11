@@ -18,56 +18,88 @@
     "href": "flaechen.html",
     "title": "Untersuchungsflächen",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungsflächen"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Das Projekt WZE@Jena",
     "section": "",
-    "text": "WZE@Jena ist ein gemeinschaftliches Projekt des Insti\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "WZE@Jena wurde gemeinsam von dem Institut für Ökologie und Evolution der Friedrich-Schiller-Universität Jena und dem Stadtforst Jena ins Leben gerufen.\n\n\n\n\n\n\n\n\nFigure 1: Stadtgebiet Jena, bewaldete Flächen in dunkelgrün\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "kamerafallen.html",
     "href": "kamerafallen.html",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "",
-    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf"
+    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Kamerabeobachtungen"
+    ]
   },
   {
     "objectID": "kamerafallen.html#wildtierbeobachtungen",
     "href": "kamerafallen.html#wildtierbeobachtungen",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "",
-    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf"
+    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Kamerabeobachtungen"
+    ]
   },
   {
     "objectID": "kamerafallen.html#phaenologische-beobachtungen",
     "href": "kamerafallen.html#phaenologische-beobachtungen",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "Phaenologische Beobachtungen",
-    "text": "Phaenologische Beobachtungen\nmhvkhl"
+    "text": "Phaenologische Beobachtungen\nmhvkhl",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Kamerabeobachtungen"
+    ]
   },
   {
     "objectID": "klima.html",
     "href": "klima.html",
     "title": "Makro- und Mikroklima",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Makro- und Mikroklima"
+    ]
   },
   {
     "objectID": "messungen.html",
     "href": "messungen.html",
     "title": "Untersuchungen",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen"
+    ]
   },
   {
     "objectID": "oekosysteme.html",
     "href": "oekosysteme.html",
     "title": "Ökosysteme",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Ökosysteme"
+    ]
   },
   {
     "objectID": "partner.html",
@@ -116,13 +148,28 @@
     "href": "standorte.html",
     "title": "Standorte",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte"
+    ]
   },
   {
     "objectID": "waldzustand.html",
     "href": "waldzustand.html",
     "title": "Waldzustand",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Waldzustand"
+    ]
+  },
+  {
+    "objectID": "shp/Grenze_Jena_invers.html",
+    "href": "shp/Grenze_Jena_invers.html",
+    "title": "WZE@Jena",
+    "section": "",
+    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n        +proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs 0 0     false    \n\n\n\n Back to top"
   }
 ]

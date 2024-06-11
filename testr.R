@@ -1,36 +1,27 @@
 # load packages
 library(leaflet, quietly = TRUE)
-library(geojsonio, quietly = TRUE)
-library(sf, quietly = TRUE)
-library(rmapshaper)
 library(dplyr)
 
-# load shp 
-## Grenzen Jena, invert
-Jena.border.WGS84 <- geojson_sf("./shp/Grenze_Jena_invers.shp") %>%
-  st_transform(, crs = 4326)
-Jena.border.WGS84.buffer <- st_buffer(Jena.border.WGS84, 
-                                      dist = 90000)
-Jena_invers.WGS84 <- ms_erase(Jena.border.WGS84.buffer,
-                              Jena.border.WGS84)
-bbox <- st_bbox(Jena.border.WGS84) %>% 
-  unname()
-
+# load spatial objects
+load("spatial.objects.jena.Rdata")
 
 # plot leaflet, OSM
 leaflet(height = 700) %>%
   addTiles() %>%
-  flyToBounds(lng1 = bbox[1], 
-              lat1 = bbox[2], 
-              lng2 = bbox[3], 
-              lat2 = bbox[4]) %>% 
+  flyToBounds(lng1 = jena.bbox[1], 
+              lat1 = jena.bbox[2], 
+              lng2 = jena.bbox[3], 
+              lat2 = jena.bbox[4]) %>% 
   setView(lng = 11.59, lat = 50.918, zoom = 12) %>%
-  addPolygons(data = Jena_invers.WGS84, 
+  addPolygons(data = jena.border.invers, 
               fillColor = "grey20", fillOpacity = 0.5, 
               stroke = TRUE, color = "black", 
               opacity = 1, weight = 3) %>% 
-  fitBounds(lng1 = bbox[1], 
-            lat1 = bbox[2],
-            lng2 = bbox[3],
-            lat2 = bbox[4])
+  addPolygons(data = jena.forest.area, 
+              fillColor = "#006400", fillOpacity = 0.5, 
+              stroke = FALSE) %>%   
+  fitBounds(lng1 = jena.bbox[1], 
+            lat1 = jena.bbox[2],
+            lng2 = jena.bbox[3],
+            lat2 = jena.bbox[4])
 

@@ -5,34 +5,40 @@ title: "Das Projekt WZE@Jena"
 ```{r}
 #| echo: false
 #| warning: false
+
+# load packages
 library(leaflet, quietly = TRUE)
-library(geojsonio, quietly = TRUE)
-library(sf, quietly = TRUE)
-gemeinde.grenzen <- geojson_read("shp/gemeinden_simplify200.geojson", what = "sp")
-coord.poly <- gemeinde.grenzen@polygons[[1]]@Polygons[[1]]@coords
-bbox <- st_bbox(gemeinde.grenzen) %>% 
-   unname()
-library(rgdal)
-Jena_invers <- readOGR("./shp/Grenze_Jena_invers.shp", verbose = FALSE)`
-#Jena_invers <- st_read("./shp/Grenze_Jena_invers.shp", layer = "Grenze_Jena_invers")
-Jena_invers2 <- spTransform(Jena_invers, "+init=epsg:4326")
+library(dplyr)
+
+# load spatial objects
+load("spatial.objects.jena.Rdata")
 
 ```
 
-WZE\@Jena ist ein gemeinschaftliches Projekt des *Insti*
+**WZE\@Jena** wurde gemeinsam von dem *Institut für Ökologie und Evolution* der Friedrich-Schiller-Universität Jena und dem *Stadtforst Jena* ins Leben gerufen.
 
 ```{r}
 #| echo: false
-#height = 780, width = 600
-leaflet(height = 700) |> 
-  addTiles() |> 
-  flyToBounds(lng1 = bbox[1], lat1 = bbox[2], lng2 = bbox[3], lat2 = bbox[4]) |>
-  # zoom Jena
-  setView(lng = 11.59, lat = 50.918, zoom = 12) |> 
-  addPolygons(coord.poly[,1], coord.poly[,2], fill = FALSE, color = "blue", weight = 4, noClip = TRUE) |>  
-   fitBounds(lng1 = bbox[1], 
-             lat1 = bbox[2],
-             lng2 = bbox[3],
-             lat2 = bbox[4])
+#| label: fig-map.jena
+#| fig-cap: "Stadtgebiet Jena, bewaldete Flächen in dunkelgrün"
+# plot leaflet, OSM
+leaflet(height = 700) %>%
+  addTiles() %>%
+  flyToBounds(lng1 = jena.bbox[1], 
+              lat1 = jena.bbox[2], 
+              lng2 = jena.bbox[3], 
+              lat2 = jena.bbox[4]) %>% 
+  setView(lng = 11.59, lat = 50.918, zoom = 12) %>%
+  addPolygons(data = jena.border.invers, 
+              fillColor = "grey20", fillOpacity = 0.5, 
+              stroke = TRUE, color = "black", 
+              opacity = 1, weight = 3) %>% 
+  addPolygons(data = jena.forest.area, 
+              fillColor = "#006400", fillOpacity = 0.5, 
+              stroke = FALSE) %>%   
+  fitBounds(lng1 = jena.bbox[1], 
+            lat1 = jena.bbox[2],
+            lng2 = jena.bbox[3],
+            lat2 = jena.bbox[4])
 
 ```
