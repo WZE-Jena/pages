@@ -4,4 +4,5 @@
 .Ruserdata
 
 /.quarto/
-find . -size +100M | cat >> .gitignore
+echo "# Files over 4mb" >> .gitignore
+find * -size +4M -type f -print >> .gitignore
