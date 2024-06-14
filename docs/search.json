@@ -1,17 +1,76 @@
 [
   {
-    "objectID": "bestandsstruktur.html",
-    "href": "bestandsstruktur.html",
-    "title": "Bestandsstruktur",
+    "objectID": "waldzustand.html",
+    "href": "waldzustand.html",
+    "title": "Waldzustand",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Waldzustand"
+    ]
+  },
+  {
+    "objectID": "shp/Grenze_Jena_invers.html",
+    "href": "shp/Grenze_Jena_invers.html",
+    "title": "WZE@Jena",
+    "section": "",
+    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n        +proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs 0 0     false    \n\n\n\n Back to top"
+  },
+  {
+    "objectID": "oekosysteme.html",
+    "href": "oekosysteme.html",
+    "title": "Ökosysteme",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Ökosysteme"
+    ]
+  },
+  {
+    "objectID": "klima.html",
+    "href": "klima.html",
+    "title": "Makro- und Mikroklima",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Makro- und Mikroklima"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Das Projekt WZE@Jena",
+    "section": "",
+    "text": "WZE@Jena wurde gemeinsam von dem Institut für Ökologie und Evolution der Friedrich-Schiller-Universität Jena und dem Stadtforst Jena ins Leben gerufen.\n\n\n\n\n\n\n\n\nFigure 1: Stadtgebiet Jena, bewaldete Flächen in dunkelgrün\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "boden.html",
     "href": "boden.html",
     "title": "Boden- und Wasserhaushalt",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Boden und Wasserhaushalt"
+    ]
+  },
+  {
+    "objectID": "bestandsstruktur.html",
+    "href": "bestandsstruktur.html",
+    "title": "Bestandsstruktur",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Standorte",
+      "Untersuchungen",
+      "Bestandsstruktur"
+    ]
   },
   {
     "objectID": "flaechen.html",
@@ -23,13 +82,6 @@
       "Standorte",
       "Untersuchungsflächen"
     ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Das Projekt WZE@Jena",
-    "section": "",
-    "text": "WZE@Jena wurde gemeinsam von dem Institut für Ökologie und Evolution der Friedrich-Schiller-Universität Jena und dem Stadtforst Jena ins Leben gerufen.\n\n\n\n\n\n\n\n\nFigure 1: Stadtgebiet Jena, bewaldete Flächen in dunkelgrün\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "kamerafallen.html",
@@ -68,18 +120,6 @@
     ]
   },
   {
-    "objectID": "klima.html",
-    "href": "klima.html",
-    "title": "Makro- und Mikroklima",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Makro- und Mikroklima"
-    ]
-  },
-  {
     "objectID": "messungen.html",
     "href": "messungen.html",
     "title": "Untersuchungen",
@@ -88,17 +128,6 @@
     "crumbs": [
       "Standorte",
       "Untersuchungen"
-    ]
-  },
-  {
-    "objectID": "oekosysteme.html",
-    "href": "oekosysteme.html",
-    "title": "Ökosysteme",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Ökosysteme"
     ]
   },
   {
@@ -152,24 +181,5 @@
     "crumbs": [
       "Standorte"
     ]
-  },
-  {
-    "objectID": "waldzustand.html",
-    "href": "waldzustand.html",
-    "title": "Waldzustand",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Waldzustand"
-    ]
-  },
-  {
-    "objectID": "shp/Grenze_Jena_invers.html",
-    "href": "shp/Grenze_Jena_invers.html",
-    "title": "WZE@Jena",
-    "section": "",
-    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n        +proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs 0 0     false    \n\n\n\n Back to top"
   }
 ]
