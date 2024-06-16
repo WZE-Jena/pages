@@ -9,25 +9,22 @@ Das Projekt WZE\@Jena ist ein gemeinsames Vorhaben von:
 Institut für Ökologie und Evolution ([Link](http://www.ecology.uni-jena.de/vegoeko.html "Institut für Ökologie und Evolution"))
 
 -   Markus Bernhardt-Römermann
-
 -   Esther Felgentreff
-
 -   Christine Römermann
+
+Institut für Zoologie und Evolutionsforschung ([Link](https://www.zoologie.uni-jena.de/ "Institut für Zoologie und Evolutionsforschung"))
+
+-   Gunnar Brehm
 
 ## Stadtforst Jena ([Link](https://ksj.jena.de/stadtwald "Stadtforst Jena"))
 
 Naturerlebnisregion [*natura jenensis*](https://www.natura-jenensis.de/ "natura jenensis")
 
 -   Olaf Schubert
-
 -   Franziska Vogelsang
-
 -   Carolina Reinhold
-
 -   Anni Bretschneider
-
 -   Markus Ziermann
-
 -   Julia Hartmann
 
 ## Stadt Jena ([Link](https://startseite.jena.de/de "Stadt Jena"))
@@ -47,5 +44,4 @@ Abteilung Biogeochemische Integration, Gruppe Ökosystemfunktionen aus der Erdbe
 Digital Services Hunting/Nature
 
 -   Benedikt Hartmann
-
 -   ...
