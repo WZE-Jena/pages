@@ -46,7 +46,11 @@ website:
       - text: "Bestandsstruktur"
         href: bestandsstruktur.qmd   
   page-footer: 
-    left: "Markus Bernhardt-Römermann, Friedrich-Schiller-Universität Jena, <br> Institut für Ökologie und Evolution, <em>markus.bernhardt@uni-jena.de</em>" 
+    left: 
+    - text: "Markus Bernhardt-Römermann, Friedrich-Schiller-Universität Jena, <br> Institut für Ökologie und Evolution, <em>markus.bernhardt@uni-jena.de</em>" 
+    right: 
+    - text: "Impressum" 
+      href: impressum.qmd 
     background: light
 format:
   html:
