@@ -9,9 +9,27 @@ title: "Das Projekt WZE@Jena"
 # load packages
 library(leaflet, quietly = TRUE)
 library(dplyr)
+library(openxlsx)
+library(sf)
+library(htmltools)
 
 # load spatial objects
 load("spatial.objects.jena.Rdata")
+
+# load WZE point locations
+path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
+wze.lage <- read.xlsx(paste0(path, "Übersicht_WZE-Punkte.xlsx"), sheet = "Lage")
+wze.ID <- data.frame(lon = wze.lage$Longitude_WGS84_E, 
+                     lat = wze.lage$Latitude_WGS84_N, 
+                     WZE_ID = wze.lage$WZE_ID, 
+                     Vegtyp_Abk = wze.lage$Vegtyp_Abk,
+                     Vegtyp_txt_kurz = wze.lage$Vegtyp_txt_kurz,
+                     stringsAsFactors = FALSE)
+wze.pt <- st_as_sf(wze.ID, coords = c("lon", "lat"), crs = 4326)
+# make color for Vegtyp_Abk categories
+# Create a palette that maps factor levels to colors
+color.veg <- unique(wze.pt$Vegtyp_Abk)
+pal <- colorFactor(c("navy", "red", "green", "blue", "pink", "gold", "brown"), domain = unique(wze.pt$Vegtyp_Abk))
 
 ```
 
@@ -22,7 +40,7 @@ load("spatial.objects.jena.Rdata")
 #| label: fig-map.jena
 #| fig-cap: "Stadtgebiet Jena, bewaldete Flächen in dunkelgrün"
 # plot leaflet, OSM
-leaflet(height = 700) %>%
+leaflet(wze.pt, height = 700) %>%
   addTiles() %>%
   flyToBounds(lng1 = jena.bbox[1], 
               lat1 = jena.bbox[2], 
@@ -35,7 +53,16 @@ leaflet(height = 700) %>%
               opacity = 1, weight = 3) %>% 
   addPolygons(data = jena.forest.area, 
               fillColor = "#006400", fillOpacity = 0.5, 
-              stroke = FALSE) %>%   
+              stroke = FALSE) %>%  
+#  addMarkers(popup = ~ wze.ID, label = wze.ID$WZE_ID) %>% 
+#  addCircles(popup = ~ wze.ID, label = wze.ID$WZE_ID) %>% 
+  addCircleMarkers(
+    label = ~ paste0("WZE_ID: ", wze.ID$WZE_ID,
+                     "; Vegetationstyp: ", wze.ID$Vegtyp_txt_kurz),
+ #   fillColor = "#fab73d",
+    color = ~pal(Vegtyp_Abk),
+    fillOpacity = 1,
+    stroke = FALSE) %>% 
   fitBounds(lng1 = jena.bbox[1], 
             lat1 = jena.bbox[2],
             lng2 = jena.bbox[3],

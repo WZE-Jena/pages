@@ -15,7 +15,8 @@ jena.border.invers <- ms_erase(Jena.border.WGS84.buffer,
 jena.bbox <- st_bbox(Jena.border.WGS84) %>% 
   unname()
 # read forested area from WALDBIOTOPE.shp
-jena.forest.area <- geojson_sf("./shp_large/WALDBIOTOPE.shp") %>%
+path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/02_GIS-Projekte/"
+jena.forest.area <- geojson_sf("./Waldbiotope_th/WALDBIOTOPE.shp") %>%
   st_transform(, crs = 4326) %>% 
   ms_clip(., Jena.border.WGS84, remove_slivers = TRUE) %>% 
   ms_dissolve() 
