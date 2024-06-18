@@ -48,6 +48,7 @@ website:
   page-footer: 
     left: "Markus Bernhardt-Römermann, Friedrich-Schiller-Universität Jena" 
     background: light
+
 format:
   html:
     theme: materia
@@ -59,4 +60,3 @@ format:
           <script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Suche";};</script>
 
 editor: visual
-

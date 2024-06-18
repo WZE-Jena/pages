@@ -1,134 +1,94 @@
 [
   {
-    "objectID": "waldzustand.html",
-    "href": "waldzustand.html",
-    "title": "Waldzustand",
+    "objectID": "bestandsstruktur.html",
+    "href": "bestandsstruktur.html",
+    "title": "Bestandsstruktur",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Waldzustand"
-    ]
-  },
-  {
-    "objectID": "shp/Grenze_Jena_invers.html",
-    "href": "shp/Grenze_Jena_invers.html",
-    "title": "WZE@Jena",
-    "section": "",
-    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n        +proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs 0 0     false    \n\n\n\n Back to top"
-  },
-  {
-    "objectID": "oekosysteme.html",
-    "href": "oekosysteme.html",
-    "title": "Ökosysteme",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Ökosysteme"
-    ]
-  },
-  {
-    "objectID": "klima.html",
-    "href": "klima.html",
-    "title": "Makro- und Mikroklima",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Makro- und Mikroklima"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Das Projekt WZE@Jena",
-    "section": "",
-    "text": "WZE@Jena wurde gemeinsam von dem Institut für Ökologie und Evolution der Friedrich-Schiller-Universität Jena und dem Stadtforst Jena ins Leben gerufen.\n\n\n\n\n\n\n\n\nFigure 1: Stadtgebiet Jena, bewaldete Flächen in dunkelgrün\n\n\n\n\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "boden.html",
     "href": "boden.html",
     "title": "Boden- und Wasserhaushalt",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Boden und Wasserhaushalt"
-    ]
-  },
-  {
-    "objectID": "bestandsstruktur.html",
-    "href": "bestandsstruktur.html",
-    "title": "Bestandsstruktur",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Bestandsstruktur"
-    ]
+    "text": "Back to top"
   },
   {
     "objectID": "flaechen.html",
     "href": "flaechen.html",
     "title": "Untersuchungsflächen",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungsflächen"
-    ]
+    "text": "Back to top"
+  },
+  {
+    "objectID": "impressum.html",
+    "href": "impressum.html",
+    "title": "Impressum",
+    "section": "",
+    "text": "Markus Bernhardt-Römermann\nFriedrich-Schiller-Universität Jena\nInstitut für Ökologie und Evolution mit Herbarium Haussknecht und Botanischem Garten\nDornburgerstraße 159\n07743 Jena\nEmail: markus.bernhardt@uni-jena.de\nTel.: ++49/+3641/9-49435"
+  },
+  {
+    "objectID": "impressum.html#angaben-für-website",
+    "href": "impressum.html#angaben-für-website",
+    "title": "Impressum",
+    "section": "",
+    "text": "Markus Bernhardt-Römermann\nFriedrich-Schiller-Universität Jena\nInstitut für Ökologie und Evolution mit Herbarium Haussknecht und Botanischem Garten\nDornburgerstraße 159\n07743 Jena\nEmail: markus.bernhardt@uni-jena.de\nTel.: ++49/+3641/9-49435"
+  },
+  {
+    "objectID": "impressum.html#inhaltlich-verantwortlich-gem.-18-abs.-2-mstv",
+    "href": "impressum.html#inhaltlich-verantwortlich-gem.-18-abs.-2-mstv",
+    "title": "Impressum",
+    "section": "Inhaltlich verantwortlich gem. § 18 Abs. 2 MStV",
+    "text": "Inhaltlich verantwortlich gem. § 18 Abs. 2 MStV\nMarkus Bernhardt-Römermann, Adresse wie oben"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Das Projekt WZE@Jena",
+    "section": "",
+    "text": "Das Projekt WZE@Jena wurde gemeinsam von dem Institut für Ökologie und Evolution der Friedrich-Schiller-Universität Jena und dem Stadtforst Jena ins Leben gerufen.\n\n\n\n\n\nFigure 1: Stadtgebiet Jena, bewaldete Flächen in dunkelgrün\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "kamerafallen.html",
     "href": "kamerafallen.html",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "",
-    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Kamerabeobachtungen"
-    ]
+    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf"
   },
   {
     "objectID": "kamerafallen.html#wildtierbeobachtungen",
     "href": "kamerafallen.html#wildtierbeobachtungen",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "",
-    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Kamerabeobachtungen"
-    ]
+    "text": "hdewhfesi\n\n\nduwhefuhew\n\n\n\n\n\nffff\n\n\n\nfggg\n\n\n\nfiwersjf"
   },
   {
     "objectID": "kamerafallen.html#phaenologische-beobachtungen",
     "href": "kamerafallen.html#phaenologische-beobachtungen",
     "title": "Naturbeobachtungen mit Kameras",
     "section": "Phaenologische Beobachtungen",
-    "text": "Phaenologische Beobachtungen\nmhvkhl",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen",
-      "Kamerabeobachtungen"
-    ]
+    "text": "Phaenologische Beobachtungen\nmhvkhl"
+  },
+  {
+    "objectID": "klima.html",
+    "href": "klima.html",
+    "title": "Makro- und Mikroklima",
+    "section": "",
+    "text": "Back to top"
   },
   {
     "objectID": "messungen.html",
     "href": "messungen.html",
     "title": "Untersuchungen",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte",
-      "Untersuchungen"
-    ]
+    "text": "Back to top"
+  },
+  {
+    "objectID": "oekosysteme.html",
+    "href": "oekosysteme.html",
+    "title": "Ökosysteme",
+    "section": "",
+    "text": "Back to top"
   },
   {
     "objectID": "partner.html",
@@ -142,7 +102,7 @@
     "href": "partner.html#friedrich-schiller-universität-jena-link",
     "title": "Projektpartner",
     "section": "Friedrich-Schiller-Universität Jena (Link)",
-    "text": "Friedrich-Schiller-Universität Jena (Link)\nInstitut für Ökologie und Evolution (Link)\n\nMarkus Bernhardt-Römermann\nEsther Felgentreff\nChristine Römermann"
+    "text": "Friedrich-Schiller-Universität Jena (Link)\nInstitut für Ökologie und Evolution (Link)\n\nMarkus Bernhardt-Römermann\nEsther Felgentreff\nChristine Römermann\n\nInstitut für Zoologie und Evolutionsforschung (Link)\n\nGunnar Brehm"
   },
   {
     "objectID": "partner.html#stadtforst-jena-link",
@@ -173,13 +133,24 @@
     "text": "Zeiss Consumer Products (Link)\nDigital Services Hunting/Nature\n\nBenedikt Hartmann\n…"
   },
   {
+    "objectID": "shp/Grenze_Jena_invers.html",
+    "href": "shp/Grenze_Jena_invers.html",
+    "title": "WZE@Jena",
+    "section": "",
+    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n        +proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs 0 0     false    \n\n\n\n Back to top"
+  },
+  {
     "objectID": "standorte.html",
     "href": "standorte.html",
     "title": "Standorte",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Standorte"
-    ]
+    "text": "Back to top"
+  },
+  {
+    "objectID": "waldzustand.html",
+    "href": "waldzustand.html",
+    "title": "Waldzustand",
+    "section": "",
+    "text": "Back to top"
   }
 ]

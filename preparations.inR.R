@@ -20,5 +20,4 @@ jena.forest.area <- geojson_sf("./Waldbiotope_th/WALDBIOTOPE.shp") %>%
   st_transform(, crs = 4326) %>% 
   ms_clip(., Jena.border.WGS84, remove_slivers = TRUE) %>% 
   ms_dissolve() 
-
 save(jena.border.invers, jena.bbox, jena.forest.area, file = "spatial.objects.jena.Rdata")

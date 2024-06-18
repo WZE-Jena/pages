@@ -17,7 +17,8 @@ library(htmltools)
 load("spatial.objects.jena.Rdata")
 
 # load WZE point locations
-path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
+path <- "C:/Users/su28yek/Nextcloud2/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
+# path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
 wze.lage <- read.xlsx(paste0(path, "Übersicht_WZE-Punkte.xlsx"), sheet = "Lage")
 wze.ID <- data.frame(lon = wze.lage$Longitude_WGS84_E, 
                      lat = wze.lage$Latitude_WGS84_N, 
@@ -26,14 +27,15 @@ wze.ID <- data.frame(lon = wze.lage$Longitude_WGS84_E,
                      Vegtyp_txt_kurz = wze.lage$Vegtyp_txt_kurz,
                      stringsAsFactors = FALSE)
 wze.pt <- st_as_sf(wze.ID, coords = c("lon", "lat"), crs = 4326)
-# make color for Vegtyp_Abk categories
-# Create a palette that maps factor levels to colors
-color.veg <- unique(wze.pt$Vegtyp_Abk)
-pal <- colorFactor(c("navy", "red", "green", "blue", "pink", "gold", "brown"), domain = unique(wze.pt$Vegtyp_Abk))
-
+# Create a palette that maps factor levels to colors for Vegtyp_Abk categories
+pal <- colorFactor(c("#556B2F", "gold", "#7FFF00", "#00FF7F", "#762a83", "grey30", "brown"), domain = unique(wze.pt$Vegtyp_Abk), ordered = TRUE)
+# make legend vector
+legend.vector <- paste0("Vegetationstyp: ", wze.ID$Vegtyp_txt_kurz, 
+                        "<br>", 
+                        "WZE_ID: ", wze.ID$WZE_ID) 
 ```
 
-**WZE\@Jena** wurde gemeinsam von dem *Institut für Ökologie und Evolution* der Friedrich-Schiller-Universität Jena und dem *Stadtforst Jena* ins Leben gerufen.
+Das Projekt **WZE\@Jena** wurde gemeinsam von dem *Institut für Ökologie und Evolution* der Friedrich-Schiller-Universität Jena und dem *Stadtforst Jena* ins Leben gerufen.
 
 ```{r}
 #| echo: false
@@ -52,20 +54,24 @@ leaflet(wze.pt, height = 700) %>%
               stroke = TRUE, color = "black", 
               opacity = 1, weight = 3) %>% 
   addPolygons(data = jena.forest.area, 
-              fillColor = "#006400", fillOpacity = 0.5, 
+              fillColor = "#228B22", fillOpacity = 0.5, 
               stroke = FALSE) %>%  
-#  addMarkers(popup = ~ wze.ID, label = wze.ID$WZE_ID) %>% 
-#  addCircles(popup = ~ wze.ID, label = wze.ID$WZE_ID) %>% 
-  addCircleMarkers(
-    label = ~ paste0("WZE_ID: ", wze.ID$WZE_ID,
-                     "; Vegetationstyp: ", wze.ID$Vegtyp_txt_kurz),
- #   fillColor = "#fab73d",
-    color = ~pal(Vegtyp_Abk),
-    fillOpacity = 1,
-    stroke = FALSE) %>% 
+  addCircleMarkers(label = ~ lapply(legend.vector, HTML),
+                   color = "black", opacity = 1, weight = 2,
+                   fillColor = ~ pal(Vegtyp_Abk),
+                   fillOpacity = 1,
+                   stroke = F) %>% 
+  addLegend(position = "bottomleft",
+            colors = c("#556B2F", "gold", 
+                       "#7FFF00", "#00FF7F", 
+                       "#762a83", "grey30", "brown"),
+            labels = unique(wze.ID$Vegtyp_txt_kurz), 
+            opacity = 1,
+            title = "Vegetationstypen") %>% 
   fitBounds(lng1 = jena.bbox[1], 
             lat1 = jena.bbox[2],
             lng2 = jena.bbox[3],
             lat2 = jena.bbox[4])
 
 ```
+
