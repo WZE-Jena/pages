@@ -28,7 +28,12 @@ wze.ID <- data.frame(lon = wze.lage$Longitude_WGS84_E,
                      stringsAsFactors = FALSE)
 wze.pt <- st_as_sf(wze.ID, coords = c("lon", "lat"), crs = 4326)
 # Create a palette that maps factor levels to colors for Vegtyp_Abk categories
-pal <- colorFactor(c("#556B2F", "gold", "#7FFF00", "#00FF7F", "#762a83", "grey30", "brown"), domain = unique(wze.pt$Vegtyp_Abk), ordered = TRUE)
+Vegtyp_Abk.factor <- unique(wze.pt$Vegtyp_Abk) %>% 
+  factor(., levels = c("L-WB", "L-OB", "B-Bu", 
+                       "L-EH", "B-Mi", "B-Ki", "RE"))
+pal <- colorFactor(c("#556B2F", "#7FFF00", "#00FF7F",
+                     "gold", "#762a83", "#B3B3B3", "brown"), 
+                   domain = Vegtyp_Abk.factor, ordered = TRUE)
 # make legend vector
 legend.vector <- paste0("Vegetationstyp: ", wze.ID$Vegtyp_txt_kurz, 
                         "<br>", 
@@ -62,10 +67,9 @@ leaflet(wze.pt, height = 700) %>%
                    fillOpacity = 1,
                    stroke = F) %>% 
   addLegend(position = "bottomleft",
-            colors = c("#556B2F", "gold", 
-                       "#7FFF00", "#00FF7F", 
-                       "#762a83", "grey30", "brown"),
-            labels = unique(wze.ID$Vegtyp_txt_kurz), 
+            colors = c("#556B2F", "#7FFF00", "#00FF7F",
+                     "gold", "#762a83", "#B3B3B3", "brown"),
+            labels = Vegtyp_Abk.factor, 
             opacity = 1,
             title = "Vegetationstypen") %>% 
   fitBounds(lng1 = jena.bbox[1], 
