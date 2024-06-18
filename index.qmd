@@ -69,7 +69,7 @@ leaflet(wze.pt, height = 700) %>%
   addLegend(position = "bottomleft",
             colors = c("#556B2F", "#7FFF00", "#00FF7F",
                      "gold", "#762a83", "#B3B3B3", "brown"),
-            labels = Vegtyp_Abk.factor, 
+            labels = unique(wze.ID$Vegtyp_txt_kurz)[c(1,3,4,2,5:7)], 
             opacity = 1,
             title = "Vegetationstypen") %>% 
   fitBounds(lng1 = jena.bbox[1], 
