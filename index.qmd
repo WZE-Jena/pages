@@ -47,7 +47,7 @@ Das Projekt **WZE\@Jena** wurde gemeinsam von dem *Institut für Ökologie und E
 #| label: fig-map.jena
 #| fig-cap: "Stadtgebiet Jena, bewaldete Flächen in dunkelgrün"
 # plot leaflet, OSM
-leaflet(wze.pt, height = 700) %>%
+leaflet(wze.pt, height = 800) %>%
   addTiles() %>%
   flyToBounds(lng1 = jena.bbox[1], 
               lat1 = jena.bbox[2], 
