@@ -17,8 +17,8 @@ library(htmltools)
 load("spatial.objects.jena.Rdata")
 
 # load WZE point locations
-path <- "C:/Users/su28yek/Nextcloud2/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
-# path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
+# path <- "C:/Users/su28yek/Nextcloud2/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
+ path <- "D:/Documents/Uni_sync/11_Projekte/03_WZE@Jena/01_Allgemeine Infos über WZE-Punkte/"
 wze.lage <- read.xlsx(paste0(path, "Übersicht_WZE-Punkte.xlsx"), sheet = "Lage")
 wze.ID <- data.frame(lon = wze.lage$Longitude_WGS84_E, 
                      lat = wze.lage$Latitude_WGS84_N, 
@@ -74,4 +74,3 @@ leaflet(wze.pt, height = 700) %>%
             lat2 = jena.bbox[4])
 
 ```
-
