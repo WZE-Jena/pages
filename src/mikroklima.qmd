@@ -1,0 +1,102 @@
+# Mikroklima
+
+```{r}
+#| context: setup
+
+load("data/microclimate.RData")
+```
+
+```{r}
+#| panel: sidebar
+
+leafletOutput("map")
+dateInput("date", "Datum", value = "2022-01-01", min = min(observations$date.time), max = max(observations$date.time))
+```
+
+
+```{r}
+#| panel: fill
+
+plotOutput("days_plot", height = "400px")
+plotOutput("day_plot", height = "400px")
+plotOutput("height_plot", height = "200px")
+```
+
+
+```{r}
+#| context: server
+
+selected_site <- reactiveVal("WB4")
+
+observeEvent(input$map_marker_click, {
+  input$map_marker_click$id |> selected_site()
+})
+
+
+output$map <- renderLeaflet({
+  sites |>
+    leaflet() |>
+    addTiles() |>
+    addMarkers(
+      lng = ~Longitude_WGS84_E,
+      lat = ~Latitude_WGS84_N,
+      layerId = ~WZE_ID,
+      label = ~ str_glue("Messtation {WZE_ID} in {elevation}m Höhe")
+    )
+})
+
+output$days_plot <- renderPlot({
+  observations |>
+    mutate(date = date(date.time)) |>
+    group_by(WZE_ID, date) |>
+    summarise(T.air_150_cm = mean(T.air_150_cm)) |>
+    arrange(WZE_ID == selected_site()) |>
+    ggplot(aes(date, T.air_150_cm, color = WZE_ID == selected_site())) +
+    geom_point() +
+    scale_color_manual(values = c(`TRUE` = "darkred", `FALSE` = "lightgrey")) +
+    theme_classic() +
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(
+      title = "Jahresverlauf",
+      x = "Tag",
+      y = "Temperatur im Tagesmittel [°C]"
+    )
+})
+
+output$day_plot <- renderPlot({
+  observations |>
+    filter(date(date.time) == input$date) |>
+    group_by(WZE_ID, date(date.time)) |>
+    arrange(WZE_ID == selected_site()) |>
+    ggplot(aes(date.time, T.air_150_cm, color = WZE_ID == selected_site())) +
+    geom_point() +
+    scale_color_manual(values = c(`TRUE` = "darkred", `FALSE` = "lightgrey")) +
+    theme_classic() +
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(
+      title = "Tagesverlauf",
+      x = "Uhrzeit",
+      y = "Temperatur [°C]"
+    )
+})
+
+output$height_plot <- renderPlot({
+  observations |>
+    filter(date(date.time) == input$date) |>
+    arrange(WZE_ID == selected_site()) |>
+    pivot_longer(starts_with("T.")) |>
+    mutate(name = name |> factor(c("T.air_150_cm", "T.air_15_cm", "T.air_2_cm", "T.soil_8_cm") |> rev())) |>
+    ggplot(aes(name, value, color = WZE_ID == selected_site())) +
+    geom_quasirandom() +
+    coord_flip() +
+    theme_classic() +
+    scale_color_manual(values = c(`TRUE` = "darkred", `FALSE` = "lightgrey")) +
+    labs(
+      title = "Höhenverlauf",
+      x = "Höhe / Tiefe [cm]",
+      y = "Temperatur innerhalb eines Tages [°C]"
+    )
+})
+```

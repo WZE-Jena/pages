@@ -1,0 +1,55 @@
+---
+title: "Waldzustandserhebung Jena"
+format: dashboard
+server: shiny
+---
+
+```{r}
+#| context: setup
+
+
+library(tidyverse)
+library(leaflet)
+library(openxlsx)
+library(sf)
+library(htmltools)
+library(ggbeeswarm)
+```
+
+# Home
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4">Wie gesund ist unser Wald?</h1>
+  <p class="lead">
+    WZE\@Jena, ein Projekt für die Waldzustandserhebung Jenas
+  </p>
+</div>
+
+
+<img src="https://www.iee.uni-jena.de/ioemedia/378/totholz-im-np-bayerischer-wald.avif?height=428&width=760" class="img-fluid" alt="Responsive image">
+
+## Projektpartner
+
+Das Projekt WZE\@Jena ist ein gemeinsames Vorhaben vom [Institut für Ökologie und Evolution](http://www.ecology.uni-jena.de/vegoeko.html) (Markus Bernhardt-Römermann, Esther Felgentreff,  Christine Römermann), vom  [Institut für Zoologie und Evolutionsforschung](https://www.zoologie.uni-jena.de/) (Gunnar Brehm), vom  [Stadtforst Jena](https://ksj.jena.de/stadtwald) (Olaf Schubert, Franziska Vogelsang, Carolina Reinhold, Anni Bretschneider, Markus Ziermann, Julia Hartmann), von der [Smart City Jena](https://smartcity.jena.de/smart-city/startseite) (Olivia Busch), dem [Max-Planck-Institut für Biogeochemie](https://www.bgc-jena.mpg.de) (Daniel Loos), sowie [Zeiss Consumer Products](www.zeiss.com), Digital Services Hunting/Nature.
+
+## Logos
+
+```{=html}
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Logo_UniJena.svg/240px-Logo_UniJena.svg.png" style="height: 5rem">
+
+<img src="https://thueringen.foej.net/files/2022/07/Stadtforst-Grafik-gruen_ohne-Internet.png
+" style="height: 5rem">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWgsxyGuDlisH4JdYVxIq_eP9Gmir3f964hw&s" style="height: 5rem">
+
+<img src="https://www.idw-online.de/de/institutionlogo29076" class="card-img-top" style="height: 5rem">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Zeiss_logo.svg/240px-Zeiss_logo.svg.png"  style="height: 5rem">
+```
+
+
+
+{{< include karte.qmd >}}
+{{< include mikroklima.qmd >}}
+{{< include impressum.qmd >}}

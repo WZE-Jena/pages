@@ -1,0 +1,7 @@
+project:
+  preview:
+    port: 80
+
+format:
+  dashboard:
+    theme: flatly

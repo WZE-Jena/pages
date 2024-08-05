@@ -1,7 +1,77 @@
-.Rproj.user
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+.Rproj.user/*
+.Rproj.user/**
+
+# Quarto specific files
+.quarto/
+.quarto/*
+
+# Quarto _site/ folder (output folder for site projects)
+_site/
+
+# Quarto _book/ folder (output folder for book projects)
+_book/
+
+# Quarto _freeze/ folder (freezes the output of the project)
+_freeze/
+
+# Quarto _output/ folder (freezes the output of the project)
+_output/
+
+# Packrat folder (a dependency management system for R projects)
+packrat/
+packrat/*
+
+# Project-specific files
+.Rproj.user/
+.RData
+.Rhistory
+.Ruserdata
+.Rproj.user/
+
+# RStudio settings
+.Rproj.user/
+.vscode/
+
+# Output files from R Markdown
+*.utf8.md
+*.knit.md
+
+# R environment data
+.Renviron
+.Rprofile
+
+# R package related files
+.Rbuildignore
 .Rhistory
 .RData
 .Ruserdata
-/_site/
-/docs/
-/.quarto/
+.Rproj.user/
+.Rproj.user/*
+
+# Temporary files
+*.Rapp.history
+*.Rhistory
+*.Rproj.user
+*.Rhistory
+.Renviron
+
+# Data files
+*.RData
+*.Rds
+
+# log files
+*.log
+
+# Temporary files created by R markdown
+*_cache/
+*_files/
